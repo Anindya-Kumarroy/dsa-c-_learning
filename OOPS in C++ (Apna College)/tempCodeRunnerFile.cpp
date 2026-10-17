@@ -1,0 +1,1 @@
+teacher t2;
