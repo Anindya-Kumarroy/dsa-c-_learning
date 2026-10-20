@@ -1,86 +1,83 @@
 #include<iostream>
 using namespace std;
 
-class Account{
-private:
-double balance=0;
-string password;
-public:
+class Anindya{
+    private:
+    double salary;
+    public:
+    string dept;
+    string subject;
+    string college;
 
-void deposit(double amount)
-{
-balance+=amount;
-}
+    Anindya(){
+        dept="CSE";
+        subject="JavaScript";
+        college="Hit Haldia";
+    }
 
-double getBalance()
-{
-    return balance;
-}
-void cashOut(double amount)
-{
-    balance-=amount;
-}
+    void changeDept(string newDept)
+    {
+        dept=newDept;
+    }
+
+    void changeSub(string newSub)
+    {
+        subject=newSub;
+    }
+    
+    void changeCollege(string newCollege)
+    {
+        college=newCollege;
+    }
+   
 
 };
 
-
 int main()
 {
-Account x;
+Anindya A;
+string data;
 int choice;
-double amount;
+do{
+    cout<<"........Menu........\n1.Dept\n2.Subject\n3.College\n4.Change Dept\n5.Change Subject\n6.Change College\n7.Exit\n"<<endl;
+    cout<<"Enter your choice:";
+    cin>>choice;
 
-do
-{
-cout<<"......Bank Menu........\n";
-cout<<"1.Deposit\n";
-cout<<"2.Check Balance\n";
-cout<<"3.Cash out\n";
-cout<<"4.Exit\n";
-cout<<"Enter your choice:";
-cin>>choice;
-switch(choice)
-{
-    case 1:
-    cout<<"Enter amount:";
-    cin>>amount;
-    if(amount>0)
+    switch(choice)
     {
-        x.deposit(amount);
-        cout<<amount<<" deposited successfully!"<<endl;
+        case 1:
+        cout<<"Dept:"<<A.dept<<endl;
+        break;
+        case 2:
+        cout<<"Subject:"<<A.subject<<endl;
+        break;
+        case 3:
+        cout<<"College:"<<A.college<<endl;
+        break;
+        case 4:
+        cout<<"Enter new Dept:";
+        cin>>data;
+        A.changeDept(data);
+        cout<<"Dept changed to "<<data<<endl;
+        break;
+        case 5:
+        cout<<"Enter new subject:";
+        cin>>data;
+        A.changeSub(data);
+        cout<<"Subject changed to "<<data<<endl;
+        break;
+        case 6:
+        cout<<"Enter new College:";
+        cin>>data;
+        A.changeCollege(data);
+        cout<<"College changed to "<<data<<endl;
+        break;
+        case 7:
+        exit(0);
+        default:
+        cout<<"Wrong choice!\n Enter between 1-7!";
     }
-    else{
-        cout<<"Invalid amount!"<<endl;
-    }
-    break;
-    case 2:
-    {
-    cout<<"Your balance is:"<<x.getBalance()<<endl;
-    }
-    break;
-    case 3:{
-    cout<<"Enter cash out amount:";
-    cin>>amount;
-    if(amount>0 && amount<=x.getBalance())
-    {
-        x.cashOut(amount);
-        cout<<amount<<" cash out successfully!"<<endl;
-    }
-    else{
-        cout<<"Invalid amount!"<<endl;
-    }
-    }
-    break;
-    case 4:
-    {
-        cout<<"Thanks for using our bank!"<<endl;
-    }
-    break;
-    default:
-    cout<<"Invalid choice!"<<endl;
+    
 }
-
-}
-while(choice!=4);
-
+while(choice!=7);
 }

@@ -16,7 +16,7 @@ public:
     // Setter Function with Validation: সরাসরি balance পরিবর্তন করতে না দিয়ে, ফাংশনের মাধ্যমে ইনপুট চেক (Validation) করে তবেই balance আপডেট করা হচ্ছে।
     void deposit(double amount)
     {
-        if(amount > 0)
+        if(amount > 0 )
         {
             balance += amount; // বৈধ অ্যামাউন্ট হলেই কেবল ব্যালেন্স বাড়বে
             cout << amount << " taka deposited successfully." << endl;
@@ -24,6 +24,19 @@ public:
         else
         {
             cout << amount << " is a wrong amount!" << endl;
+        }
+    }
+
+    void withdraw(double amount )
+    {
+        if(amount>0 && amount<=balance)
+        {
+            balance -= amount;
+            cout<<amount<< " withdrawal successful!"<<endl;
+        }
+        else
+        {
+            cout<<"Wrong amount!"<<endl;
         }
     }
 
@@ -45,7 +58,8 @@ int main()
         cout << "............Bank menu.........." << endl;
         cout << "1.Deposit" << endl;
         cout << "2.Check Balance" << endl;
-        cout << "3.Exit" << endl;
+        cout << "3.Withdraw" <<endl;
+        cout << "4.Exit" << endl;
 
         cout << "Enter your choice:" << endl;
         cin >> choice;
@@ -63,13 +77,18 @@ int main()
                 cout << "Your current balance is : " << account.getBalance() << " taka" << endl;
                 break;
             case 3:
+                  cout<<"Enter amount to withdraw: ";
+                  cin>>amount;
+                  account.withdraw(amount);
+                  break; 
+            case 4:
                 cout << "Thanks for using our bank!." << endl;
                 break;
             default:
                 cout << "Invalid choice! Try again." << endl;
         }
 
-    } while(choice != 3);
+    } while(choice != 4);
 
     return 0;
 }

@@ -40,7 +40,6 @@ Teacher(){                                                          // Construct
 int main()
 {
 Teacher t1;                                                         // It will call constructor.
-
 t1.name="Anindya";
 t1.dept="Computer Science";
 t1.subject="C++ ";
