@@ -1,11 +1,11 @@
 // Compile time polymorphism.
-//condtructor overloading.
+// Constructor overloading.
 #include<iostream>        
 #include<string>
 using namespace std;
 
 class student{
-    public:
+public:
 string name;
 
 student()

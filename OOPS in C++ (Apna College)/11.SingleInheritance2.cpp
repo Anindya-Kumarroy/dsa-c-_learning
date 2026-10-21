@@ -12,6 +12,7 @@ public:
 
     // Person ক্লাসের কনস্ট্রাক্টর (Constructor)
     person(string name, int age) {
+        cout<<"Person constructor called!\n";
         this->name = name; // প্যারামিটার থেকে আসা নাম ক্লাসের ভ্যারিয়েবলে অ্যাসাইন করা
         this->age = age;   // প্যারামিটার থেকে আসা বয়স ক্লাসের ভ্যারিয়েবলে অ্যাসাইন করা
     }
@@ -27,6 +28,7 @@ public:
     // এখানে person(name, age)-এর মাধ্যমে Parent ক্লাসের কনস্ট্রাক্টরকে কল করা হচ্ছে
     // যেহেতু Parent ক্লাসের কনস্ট্রাক্টর আগেই ডিফাইন করা আছে, তাই এখানে আবার ডাটা টাইপ লেখার প্রয়োজন নেই
     student(string name, int age, int roll) : person(name, age) {
+        cout<<"Student constructor called!\n";
         this->roll = roll; // নিজস্ব ভ্যারিয়েবল 'roll' সেট করা হচ্ছে
     }
 
