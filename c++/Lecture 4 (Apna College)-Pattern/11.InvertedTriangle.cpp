@@ -2,20 +2,18 @@
 using namespace std;
 int main()
 {
-    int n,i,j;
-    cout<<"Enter n:";
-    cin>>n;
-    for(i=1;i<=n;i++)
+int n,i,j;
+int ch=65;
+cout<<"Enter n:";
+cin>>n;
+for(i=1;i<=n;i++)
+{
+    for(j=1;j<=i;j++)
     {
-        for(j=0;j<=i;j++)
-        {
-            cout<<" ";
-
-        }
-        for(j=0;j<=n-i;j++)
-        {
-            cout<<i;
-        }
-        cout<<endl;
+        char result=ch;
+        cout<<result<<" ";
+          ch++;        
     }
+    cout<<endl;
+}
 }

@@ -16,7 +16,6 @@ int main()
             cout<<ch<<" ";
             ch=ch+1;
         }
-        cout<<endl;
-
+        cout<<endl;  
     }
 }

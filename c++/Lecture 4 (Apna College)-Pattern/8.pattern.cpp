@@ -2,15 +2,16 @@
 using namespace std;
 int main()
 {
-    int n,i,j;
+    int n;
     cout<<"Enter n:";
     cin>>n;
-    for(i=0;i<n;i++)
+    for(int i=1;i<=n;i++)
     {
-        for(j=i+1;j>0;j--)
-        {
-            cout<<j<<" ";
-        }
-        cout<<endl;
+      for(int j=i;j>0;j--)
+      {
+         cout<<j<<" ";
+      }
+      cout<<endl;
+
     }
 }
