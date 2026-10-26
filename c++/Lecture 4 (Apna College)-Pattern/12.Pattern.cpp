@@ -2,23 +2,25 @@
 using namespace std;
 int main()
 {
-    int i,j,n;
+    int n;
     cout<<"Enter n:";
     cin>>n;
-    for(i=0;i<n;i++)
+    for(int i=0;i<n;i++)
     {
-        for(j=1;j<=n-i-1;j++)
+        for(int s=1;s<=n-1-i;s++)
         {
             cout<<" ";
         }
-        for(j=1;j<=i+1;j++)
+        for(int j=1;j<=i+1;j++)
         {
             cout<<j;
         }
-         for(j=i;j>=1;j--)
+        for(int k=i;k>=1;k--)
         {
-            cout<<j;
+            cout<<k;
         }
         cout<<endl;
-     }
     }
+}
+
+
