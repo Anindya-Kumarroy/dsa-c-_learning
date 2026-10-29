@@ -7,11 +7,12 @@ int main()
     cin>>n;
     for(int i=1;i<=n;i++)
     {
-      for(int j=i;j>0;j--)
+      int ch=i;
+      for(int j=1;j<i+1;j++)
       {
-         cout<<j<<" ";
+        cout<<ch<<" ";
+        ch--;
       }
       cout<<endl;
-
     }
 }
